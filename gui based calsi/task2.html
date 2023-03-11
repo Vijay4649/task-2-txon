@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gui Based Calculator </title>
+    <link rel="stylesheet" href="task2.css">
+</head>
+<body>
+    <div class="headline">Task:-2  Simple Calculator </div>
+<div class="headline2">(Txon)</div>
+
+  <div class="container">
+    <form name="form">
+        <div class="display"> <!-- here display denote to screen of calc--> 
+            <input class="input" type="digit" placeholder="0" name="displayResult" id="result" />
+            <input id="btn"class="btn" type="button"  name="clear" value="C" onclick="clearScreen()"/>
+        </div>
+        <div class="buttons">   <!-- here we have taken four input because calculator 4 button in single row -->
+            <div class="row">
+             <input type="button" class="btn"  name="b7" value="7" onclick="func(b7.value)"> 
+             <input type="button" class="btn"  name="b8" value="8" onclick="func(b8.value)">
+             <input type="button" class="btn"  name="b9" value="9" onclick="func(b9.value)">
+             <input type="button" id="btn1" class="btn"  name="Plus" value="+" onclick="func(Plus.value)">
+           </div> 
+        <div class="row">
+            <input type="button" class="btn" name="b4" value="4" onclick="func(b4.value)">
+            <input type="button" class="btn" name="b5" value="5" onclick="func(b5.value)">
+            <input type="button" class="btn" name="b6" value="6" onclick="func(b6.value)">
+            <input type="button" id="btn1" class="btn" name="minus" value="-" onclick="func(minus.value)">
+        </div> 
+        <div class="row">
+            <input type="button" class="btn" name="b1" value="1" onclick="func(b1.value)">
+            <input type="button" class="btn" name="b2" value="2" onclick="func(b2.value)">
+            <input type="button" class="btn" name="b3" value="3" onclick="func(b3.value)">
+            <input type="button" id="btn1" class="btn" name="mul" value="*" onclick="func(mul.value)">
+        </div> 
+        <div class="row">
+            <input type="button" class="btn" name="b0" value="0" onclick="func(b0.value)">
+            <input type="button" id="btn1" class="btn" name="bd" value="." onclick="func(bd.value)">
+            <input type="button" id="btn1" class="btn" name="divv" value="/" onclick="func(divv.value)">
+            <input type="button" id="btn1" class="blue" name="Equal" value="=" onclick="displayResult.value=eval(displayResult.value)">
+        </div> 
+     </div>
+    </form>
+  </div>  
+    <script> // here calculation is performed 
+        function func(result) // it is parameter)
+        {
+            form.displayResult.value = form.displayResult.value + result;
+        } 
+        function clearScreen() {
+            document.getElementById("result").value= ""
+            
+        }
+    </script>
+</body>
+</html>
